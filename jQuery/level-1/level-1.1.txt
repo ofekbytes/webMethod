@@ -1,7 +1,11 @@
 .
 .
 jQuery - JavaScript library.
-
+.
+.
+level 1: Starting jQuery
+.
+.
 // JavaScript
 var status = document.getElementById("start");
 status.innerHTML = "stop";

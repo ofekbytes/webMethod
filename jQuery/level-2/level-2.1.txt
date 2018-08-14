@@ -1,0 +1,31 @@
+.
+.
+jQuery - JavaScript library.
+.
+.
+lavel 2 - Attributes and Content
+.
+.
+
+level 2.1 - Get & Set Attribute Values
+
+-- manipulate attributes assigned to HTML elements through jQuery:
+   HTML attributes: href, src, id, class, style.
+
+-- attr() method gets the value of an attribute.
+
+Example:
+
+HTML:
+<a href="www.yahoo.com">
+   Click here
+</a> 
+
+JavaScript:
+$(function() {
+  var val = $("a").attr("href");
+  alert(val);
+});
+
+
+
