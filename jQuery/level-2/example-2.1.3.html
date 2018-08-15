@@ -1,0 +1,42 @@
+<!-- example-2.1.1.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>remove attributes Values</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+
+  <style>
+    .tabelClass 
+    {
+      background-color:black;
+      color: white;
+      font-weight:bold;
+    }  
+  </style>
+
+  <body>
+
+      <table border="3" class="tabelClass" >
+          <tr>
+              <td>col-1,1</td>
+              <td>col-1,2</td>
+          </tr>
+          <tr>
+              <td>col-2,1</td>
+              <td>col-2,2</td>
+          </tr>
+      </table>
+  
+    <script>
+        $(function() 
+         {
+            //removeAttr("attribute name")
+            $("table").removeAttr("border");
+            $("table").removeAttr("class");
+        });
+    </script>
+    
+</body>
+</html>
