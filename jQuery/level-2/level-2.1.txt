@@ -46,5 +46,16 @@ level 2.2 - Get & Set Content
 --- example: <"example-2.2.1.html">
 
 
+-- text() method get the content of the selected element without html markup (clean from html tags).
+--- example: <"example-2.2.1.html">
+
+-!- html() method and text() method can be used for all HTML elements that can contain content.
+
+
 --
+
+
+
+
+
 
