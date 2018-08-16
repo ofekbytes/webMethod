@@ -8,7 +8,7 @@ lavel 2 - Attributes and Content
 .
 level 2.1 - Get & Set Attribute Values
 level 2.2 - Get & Set Content
-
+level 2.3 - Adding Content
 .
 .
 level 2.1 - Get & Set Attribute Values
@@ -65,7 +65,7 @@ removeAttr() method -  removes the specified attribute.
 
 .
 .
-level 2.2 -  Adding Content
+level 2.3 - Adding Content
 
 -- jQuery has methods that are used to add new content to a selected element without deleting the existing content:
 -- append() methods - inserts content at the end of the selected elements.
@@ -82,10 +82,4 @@ level 2.2 -  Adding Content
 -!- creating elements can be used to create any new HTML element, 
 --- example: creates a new div.
     $("<div></div>") 
-
-
--- 
-
-
-
 
