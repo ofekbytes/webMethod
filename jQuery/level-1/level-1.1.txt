@@ -72,3 +72,4 @@ $("div p")
 $("*")  
 
 
+*** method - function defined in an object **
