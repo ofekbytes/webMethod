@@ -14,3 +14,4 @@ level 3.1 - Adding & Removing Classes
 level 3.1 - Adding & Removing Classes
 
 --  addClass( ) method adds class/es to the selected elements.
+
