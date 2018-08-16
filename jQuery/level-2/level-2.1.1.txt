@@ -42,7 +42,7 @@ level 2.2 - Get & Set Content
    html(), 
 
 
---  html() method get the content of the selected element with the HTML markup.  
+-- html() method get the content of the selected element with the HTML markup.  
 -- text() method get the content of the selected element without html markup (clean from html tags).
 --- example: <"example-2.2.1.html"> - get method html() text() 
 --- example: <"example-2.2.2.html"> - set method html() / text()
