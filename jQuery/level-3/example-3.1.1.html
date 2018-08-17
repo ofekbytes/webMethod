@@ -1,0 +1,59 @@
+<!-- example-2.1.1.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> add/remove class from 'div' element </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+
+  <style>
+
+    .changeColor 
+    {
+        color: green;
+        font-size:x-large;
+    }
+
+    .changeSize
+    {
+        font-size: xx-large;
+    }
+
+    .changeColor
+    {
+        color: blue;
+    }
+
+    .changeBackGround
+    {
+        background: yellowgreen;
+    }
+
+  </style>
+
+  <body>
+
+      <div id="greeting"> add class to all 'div' elements </div>     
+      <div id="subject"> add class to id="subject" </div>
+
+      <script>
+
+          $(function() 
+           {
+                //addClass
+                $("div").addClass("changeColor");
+                $("#subject").addClass("changeSize changeColor changeBackGround");
+
+                //removeClass
+                $("#subject").removeClass("changeSize");
+            });
+
+        // output:  (<div> with large font and "green" color)
+        // Welcone,  
+
+    </script>
+
+</body>
+</html>
+
