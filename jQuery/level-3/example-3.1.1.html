@@ -20,9 +20,12 @@
         font-size: xx-large;
     }
 
+
     .changeColor
     {
         color: blue;
+        /* color: red; */
+        font-weight: bold;
     }
 
     .changeBackGround
@@ -37,6 +40,9 @@
       <div id="greeting"> add class to all 'div' elements </div>     
       <div id="subject"> add class to id="subject" </div>
 
+      <p id="pChange"> Make a change </p>
+      <button id="btnToggleClass" type="submit">Toggle Class</button>
+
       <script>
 
           $(function() 
@@ -47,10 +53,13 @@
 
                 //removeClass
                 $("#subject").removeClass("changeSize");
-            });
 
-        // output:  (<div> with large font and "green" color)
-        // Welcone,  
+                $("button").click(function()
+                {
+                    $("#pChange").toggleClass("changeColor");
+                })
+
+            });
 
     </script>
 

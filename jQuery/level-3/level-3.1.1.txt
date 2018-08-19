@@ -13,11 +13,37 @@ level 3.1 - Adding & Removing Classes
 .
 level 3.1 - Adding & Removing Classes
 
--- addClass( ) method add class/es to the selected elements.
+-- addClass() method add class/es to the selected elements.
 -- removeClass() method remove class/es to the selected elements.
---- example: <"example-3.1.1.html"> - addClass( ) method - add/remove class from <div> element  (class name "header")
+-- toggleClass() method -  between addClass() -and- removeClass() classes.
+    remove a Class - when class exist in an element.
+    add a class - when class not exist in an element.
+--- example: <"example-3.1.1.html"> - addClass( ) method - addClass/removeClass/toggleClass class from <div> element  (class name "header")
 
 
---  toggleClass() method 
+.
+.
+level 3.2 - CSS Properties
+
+-- css() method can be used to get and set CSS property values.
+--- example: <"example-3.2.1.html"> - css() method - show -and- update css properies.
+
+-- set multiple CSS properties with JSON syntax. {"key/property":"value", "key/property":"value"}
+--- example: <"example-3.2.2.html"> - css() method - show -and- update multiple CSS properties with JSON syntax.
 
 
+.
+.
+level 3.3 -Dimensions 
+
+--
+
+
+
+
+
+---????----
+
+-?- "toggle" ---> show/hide element 
+
+---????----
