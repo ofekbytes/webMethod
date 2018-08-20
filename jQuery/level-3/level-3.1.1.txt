@@ -7,6 +7,8 @@ lavel 3 - Manipulating CSS - jQuery CSS manipulation methods .
 .
 .
 level 3.1 - Adding & Removing Classes
+level 3.2 - CSS Properties
+level 3.3 - Dimensions
 
 
 .
@@ -34,10 +36,11 @@ level 3.2 - CSS Properties
 
 .
 .
-level 3.3 -Dimensions 
+level 3.3 - Dimensions 
 
---
-
+-- width() method - get / set width of HTML elements.
+-- height() methods get / set heightnd of HTML elements.
+--- example: <"example-3.3.1.html"> -  
 
 
 
