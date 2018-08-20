@@ -1,0 +1,28 @@
+.
+.
+jQuery - JavaScript library.
+.
+.
+lavel 4 - Manipulate DOM - jQuery Manipulate DOM methods .
+.
+.
+level 4.1 - 
+
+
+.
+.
+level 4.1 - Manipulate DOM - 
+
+-- When you open any webpage in a browser, the HTML of the page is loaded and rendered visually on the screen.
+   To accomplish this, the browser builds the Document Object Model (DOM) of that page, 
+   which is an object oriented model of its logical structure.
+   The DOM of an HTML document can be represented as a nested set of boxes:
+
+-- dom.png
+
+-- The DOM represents a document as a tree structure where HTML elements are interrelated nodes in the tree.
+Nodes can have child nodes. Nodes on the same tree level are called siblings.
+jQuery traversing is the term used to describe the process of moving through the DOM and finding (selecting) HTML elements based on their relation to other elements.
+jQuery makes it easy to traverse the DOM and work with HTML elements.
+
+--- example: <"example-4.1.1.html"> - 
