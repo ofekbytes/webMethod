@@ -39,8 +39,15 @@ level 3.2 - CSS Properties
 level 3.3 - Dimensions 
 
 -- width() method - get / set width of HTML elements.
--- height() methods get / set heightnd of HTML elements.
---- example: <"example-3.3.1.html"> -  
+-- height() method - get / set height of HTML elements.
+--- example: <"example-3.3.1.html"> -  width() method -and- height() method get/set width/height HTML elements
+
+
+-- innerWidth()  method - get / set padding innerWidth of HTML elements.
+-- innerHeight() method - get / set padding innerHeight of HTML elements.
+-- outerWidth()  method - get / set padding outerWidth and borders. 
+-- outerHeight() method - get / set padding outerHeight and borders.
+--- example: <"example-3.3.2.html"> -  methods: innerWidth(), innerHeight(), outerWidth(), outerHeight().
 
 
 

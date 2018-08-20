@@ -3,29 +3,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Dimensions </title>
+    <title> Dimensions - width/height </title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
   <style>
+      .test{
+          background-color: aqua;
+      }
 
   </style>
 
   <body>
 
-      <p id="pChange"> Make a change </p>
+      <div id="pChange"></div>
 
 
       <script>
 
           $(function() 
            {
-                //change property with jSon
-                $("#pChange").css({"background-color": "blue" ,"color":"white" ,"font-size": "200%"});
+               $("div").css("background-color","aqua");
 
-                console.log($("#pChange").css("background-color")); 
-                console.log($("#pChange").css("color")); 
-                console.log($("#pChange").css("font-size")); 
+               $("#pChange").width(120);
+               $("#pChange").height(120);
+
             });
 
     </script>
