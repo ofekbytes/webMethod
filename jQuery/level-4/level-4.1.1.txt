@@ -8,6 +8,9 @@ lavel 4 - Manipulate DOM - jQuery Manipulate DOM methods .
 .
 level 4.1 - Manipulate DOM 
 level 4.2 - DOM Traversal
+level 4.3 - DOM Traversal method
+
+
 .
 .
 level 4.1 - Manipulate DOM 
@@ -62,16 +65,25 @@ The <body> element is the parent of the <h1> and <a> elements.
 The <h1> and <a> elements are child elements of the <body> element and descendants of <html>.
 The <h1> and <a> elements are siblings (they share the same parent).
 
+
 Summary
-An ancestor is a parent, grandparent, great-grandparent, and so on.
-A descendant is a child, grandchild, great-grandchild, and so on.
-Siblings share the same parent.
-Understanding the relationship between the DOM elements is important to be able to traverse the DOM correctly.
+<html> parent of <body> <h1> <h2>
+<body> parent of <h1> <h2>
+<h1> <h2> child of <body> 
+<h1> <h2> are Siblings share the same parent <body>
+<body> child of <html>
 
+--- example: <"example-4.1.1.html">  - dom example
+.
+.
+level 4.3 - DOM Traversal method
 
+-- parent() method - returns the direct parent element of the selected element
+--- example: <"example-4.1.2.html"> - parent() method
 
+-- eq() method - used to select a specific element from multiple selected elements.
+--- second <div> element (index 0 = 1)
+    $("div").eq(1); //=2
 
-
-
-
+  
 
