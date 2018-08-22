@@ -7,13 +7,105 @@ lavel 5 - Events
 .
 .
 level 5.1 - Handling Events
-
+level 5.2 - Common Events
+level 5.3 - on method
 
 
 .
 .
 level 5.1 - Handling Events
 
--- 
+-- Handling Events - 
+   JQuery provides an efficient way to handle events. 
+   Events occur when the user performs an action: "clicking" an element, "moving" the mouse, "submitting" a form. 
+   When an event occurs on a target element, a handler function is executed.
+   For example: handling the "click" event on an element with id="demo" and display the current date when the button is clicked. 
 
---- example: <"example-5.1.1.html">  -
+--- example: <"example-5.1.1.html"> - JavaScript example
+
+    var x = document.getElementById("demo");
+    x.onclick = function () 
+    {
+        document.body.innerHTML = Date();
+    }
+
+
+--- example: <"example-5.1.2.html"> - jquery example
+ 
+    $("#demo").click(function() 
+    {
+        $("body").html(Date());
+    });
+
+
+-!- "onclick" in JavaScript is "click" in jQuery
+
+-!- event handler - is event that fired/submited and execute a function
+    (The function that is executed when an event is fired is called the event handler)
+.
+.
+level 5.2 - Common Events
+
+- most commonly used events:
+
+-- Mouse Events:
+--- click occurs - when an element is clicked.
+--- dblclick occurs - when an element is double-clicked.
+--- mouseenter occurs - when the mouse pointer is over (enters) the selected element.
+--- mouseleave occurs - when the mouse pointer leaves the selected element.
+--- mouseover occurs - when the mouse pointer is over the selected element.
+
+-- Keyboard Events:
+--- keydown occurs - when a keyboard key is pressed down.
+--- keyup occurs - when a keyboard key is released.
+
+-- Form Events:
+--- submit occurs - when a form is submitted.
+--- change occurs - when the value of an element has been changed.
+--- focus occurs - when an element gets focus.
+--- blur occurs - when an element loses focus.
+
+-- Document Events: 
+--- ready occurs - when the DOM has been loaded.
+--- resize occurs - when the browser window changes size.
+--- scroll occurs - when the user scrolls in the specified element.
+
+--- example: <"example-5.1.1.html"> - "keyup" event handler
+
+
+.
+.
+level 5.3 - on() method, off() method
+
+- on() method - used to attach an event to the selected element.
+-- example - on() method
+    $( "p" ).on( "click", function() 
+    {
+        alert("clicked");
+    });
+
+--- example: <"example-5.3.1.html"> - on() method
+
+-- Try It Yourself
+
+
+-!- The on() method is useful for binding the same handler function to multiple events. 
+    You can provide multiple event names separated by spaces as the first argument(click dblclick). 
+   
+    $( "p" ).on( "click mouseover", function() 
+    {
+        alert("clicked");
+    });
+
+- off() method - remove event handlers
+-- example:
+    $("div").on("click", function() 
+    { 
+        alert('Hi there!'); 
+    }); 
+    $("div").off("click");
+
+--- example: <"example-5.3.2.html"> - off() method / remove event handler
+
+
+-!- The argument of the off() method is the event name you want to remove the handler for.

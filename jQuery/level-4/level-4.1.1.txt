@@ -10,8 +10,6 @@ level 4.1 - Manipulate DOM
 level 4.2 - DOM Traversal
 level 4.3 - DOM Traversal method available
 level 4.4 - DOM Traversal method
-
-
 .
 .
 level 4.1 - Manipulate DOM 
