@@ -8,8 +8,9 @@ lavel 5 - Events
 .
 level 5.1 - Handling Events
 level 5.2 - Common Events
-level 5.3 - on method
-
+level 5.3 - on() method, off() method
+level 5.4 - The Event Object
+level 5.5 - trigger Events
 
 .
 .
@@ -71,8 +72,6 @@ level 5.2 - Common Events
 --- scroll occurs - when the user scrolls in the specified element.
 
 --- example: <"example-5.1.1.html"> - "keyup" event handler
-
-
 .
 .
 level 5.3 - on() method, off() method
@@ -109,3 +108,73 @@ level 5.3 - on() method, off() method
 
 
 -!- The argument of the off() method is the event name you want to remove the handler for.
+.
+.
+level 5.4 - The Event Object
+
+-- very event handling function can receive an event object (properties and methods related to the event).
+-- example 
+--- mouse position: pageX, pageY (X , Y).
+--- type the type of the event (example: "click").
+--- button / key that was pressed.
+--- data any data that was passed in when the event was bound.
+--- target the DOM element that initiated the event.
+--- preventDefault() method -- prevent the default action of the event (example: following a link).
+--- stopPropagation() method - stop the event from bubbling up to other elements.
+
+--- example: <"example-5.4.1.html"> - "click" event on an <a> element and prevent it from following the link provided in the "href" attribute:
+
+--- example: <"example-5.4.2.html">  - KeyPressed to Ascii value
+    $("input").keydown(function(event)
+    {
+        console.log(event.which);
+    })
+.
+.
+level 5.5 - trigger Events
+
+-- trigger() method - trigger events programmatically (from code). 
+--- example, trigger "click" event from the code (without the help of the user)
+    $("div").click(function() 
+    {
+        alert("Clicked!");
+    });
+    $("div").trigger("click");
+
+--- example: <"example-5.4.3.html"> - trigger Events
+
+-!- The trigger() method cannot be used to mimic native browser events, such as clicking on a file input box or an anchor tag. Only events in the jQuery event system can be handled.
+
+-- example: trigger the submit event on the selected element.
+$("form").trigger("submit");
+.
+.
+level 5.6 - Creating a To-Do List
+
+-- example: a To-Do list project. (add/remove items).
+
+-- html --
+    <h1>My To-Do List</h1>
+    <input type="text" placeholder="New item" />
+    <button id="add">Add</button>
+    <ol id="mylist"></ol>
+
+
+-- click event for the button - 
+    $(function() 
+    {
+        $("#add").on("click", function() 
+        {
+        //event handler
+        });
+    });
+
+-- Inside the event handler we select the value of the input field and create a new <li> element, adding it to the list:
+
+var val = $("input").val();
+if(val !== '') {
+  var elem = $("<li></li>").text(val);
+  $(elem).append("<button class='rem'>X</button>");
+  $("#mylist").append(elem);
+  $("input").val(""); //clear the input
+}
