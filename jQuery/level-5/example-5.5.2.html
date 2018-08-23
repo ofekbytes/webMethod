@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> To Do List 1 </title>
+    <title> To Do List 2 </title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
@@ -34,21 +34,24 @@
       
       $(function() 
       {
-        $("#add").on("click", function() 
-        {
-          //GET VALUE
-          var val = $("input").val();
-          
-          //CHECK IF FIELD IS NOT EMPTY
-          if(val !== '') 
-          {
-            var elem = $("<li></li>").text(val);
-            $(elem).append("<button class='rem'>X</button>");
-            $("#mylist").append(elem);
-            $("input").val("");
-          }
-         });
-        });
+         $("#add").on("click", function() 
+         {
+            var val = $("input").val();
+
+            if(val !== '') 
+            {
+                var elem = $("<li></li>").text(val);
+                $(elem).append("<button class='rem'>X</button>");
+                $("#mylist").append(elem);
+                $("input").val("");
+                $(".rem").on("click", function() 
+                {
+                     $(this).parent().remove();
+                });
+            }
+          });
+      });
+
     
     </script>
 

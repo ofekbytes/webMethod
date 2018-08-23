@@ -165,16 +165,70 @@ level 5.6 - Creating a To-Do List
     {
         $("#add").on("click", function() 
         {
-        //event handler
+        //event handler//
         });
     });
 
+
 -- Inside the event handler we select the value of the input field and create a new <li> element, adding it to the list:
 
-var val = $("input").val();
-if(val !== '') {
-  var elem = $("<li></li>").text(val);
-  $(elem).append("<button class='rem'>X</button>");
-  $("#mylist").append(elem);
-  $("input").val(""); //clear the input
-}
+    $(function() 
+    {
+        $("#add").on("click", function() 
+        {
+            //event handler// 
+            var val = $("input").val();
+            if(val !== '') 
+            {
+                var elem = $("<li></li>").text(val);
+                $(elem).append("<button class='rem'>X</button>");
+                $("#mylist").append(elem);
+                $("input").val(""); //clear the input
+            }
+       });
+    });
+
+
+--  The code above takes the value of the input field, assigns it to the val variable. 
+    The if statement checks that the value is not blank and then creates a new <li> element.
+    A button for removing it is added, after which the newly created element is added to the <ol id="mylist"> list.
+
+--- example: <"example-5.5.1.html"> - to do list part 1 - add
+
+
+-- remove event - (remove event button)
+
+    $(".rem").on("click", function() {
+    $(this).parent().remove();
+    });
+
+
+-- removing the parent of the current object (the parent of the "remove" button is the <li> element)
+
+    $(function() 
+    {
+        $("#add").on("click", function() 
+        {
+            var val = $("input").val();
+
+            if(val !== '') 
+            {
+                var elem = $("<li></li>").text(val);
+                $(elem).append("<button class='rem'>X</button>");
+                $("#mylist").append(elem);
+                $("input").val("");
+                $(".rem").on("click", function() 
+                {
+                     $(this).parent().remove();
+                });
+            }
+        });
+    });
+
+
+--- example: <"example-5.5.2.html"> - to do list part 2 - add/delete
+
+
+-!- "this" keyword represents the current object.
+
+
