@@ -1,9 +1,9 @@
-<!-- example-6.1.1.html -->
+<!-- example-6.1.2.html -->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title> hide()/show()/toggle() method </title>
+    <title> hide()/show()/toggle() method speed optional animation argument </title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
@@ -39,9 +39,12 @@
 
     <script>
       
-      $("p").click(function() 
+      $(function() 
       {
-          $("div").toggle();
+        $("p").click(function() 
+        {
+          $("div").toggle(1000); //1000ms = 1sec
+        }); 
       });
    
     </script>

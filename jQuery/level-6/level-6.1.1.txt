@@ -3,14 +3,76 @@
 jQuery - JavaScript library.
 .
 .
-lavel 6 - 
+lavel 6 - effects
 .
 .
-level 6.1 -
+level 6.1 - hide/show (animations)
 
 
 .
 .
-level 6.1 - 
+level 6.1 - hide/show (animations)
 
---- example: <"example-6.1.1.html"> - 
+-- hide() methods - hide the selected elements
+-- show() methods - show the selected elements
+-- toggle() method - toggle between hiding and showing elements.
+
+    $(function() 
+    {
+        $("p").click(function() 
+        {
+            $("div").toggle();
+         });
+    });
+
+--- example: <"example-6.1.1.html"> - hide()/show()/toggle() method
+
+
+-- The hide()/show()/toggle() methods - speed optional animation argument
+   speed in milliseconds.
+   For example, let's pass 1000 millisecond as the speed argument to the toggle() method:
+
+    $(function() 
+    {
+        $("p").click(function() 
+        {
+            $("div").toggle(1000);
+        });
+    });
+
+--- example: <"example-6.1.2.html"> - hide()/show()/toggle() method speed optional animation argument
+
+
+-!- The hide()/show()/toggle() methods can take a second optional parameter callback, 
+   which is a function to be executed after the animation completes.
+
+--- example: <"example-6.1.3.html"> - hide()/show()/toggle() method speed/callback optional animation argument
+
+.
+.
+level 6.2 - Fade In/Out
+
+-- fadeIn method - Fade In animation
+-- fadeOut method - Fade Out animation
+-- fadeToggle() method - toggle between hiding and showing elements.
+
+    $(function() 
+    {
+        $("p").click(function() 
+        {
+            $("div").fadeToggle(1000);
+        });
+    });
+
+--- example: <"example-6.2.1.html"> - hide()/show()/fadeToggle()
+
+-!- fadeToggle() method - optional parameters: "speed" and "callback"
+
+
+--- example: <"example-6.2.2.html"> - hide()/show()/fadeToggle() with function
+
+
+-- fadeTo() method fading - which allows fading to a given opacity (value between 0 and 1).
+   $("div").fadeTo(1500, 0.7);
+
+

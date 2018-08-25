@@ -1,9 +1,9 @@
-<!-- example-6.1.1.html -->
+<!-- example-6.2.2.html -->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title> hide()/show()/toggle() method </title>
+    <title> hide()/show()/fadeToggle() method speed optional animation argument and callback </title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
@@ -37,11 +37,18 @@
       nisi ut aliquip ex ea commodo consequat.
     </div>
 
+    <p id="outputCallback"></p>
     <script>
       
-      $("p").click(function() 
+      $(function() 
       {
-          $("div").toggle();
+        $("p").click(function() 
+        {
+          $("div").fadeToggle(1000, function()  
+          {
+            console.log("function doing somthing after animation - fadeToggle");
+          }); //1000ms = 1sec
+        }); 
       });
    
     </script>
