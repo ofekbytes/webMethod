@@ -9,6 +9,7 @@ lavel 6 - effects
 level 6.1 - hide/show (animations)
 level 6.2 - Fade In/Out
 level 6.3 - Slide Up/Down
+level 6.4 - animate()
 
 .
 .
@@ -120,5 +121,55 @@ level 6.4 - animate()
     or abbreviation begins with a capital letter with the first word in lowercase).
     
 --- example: 
-    write paddingLeft instead of padding-left, 
-    marginRight instead of margin-right....
+    write "paddingLeft" instead of "padding-left", 
+    "marginRight" instead of "margin-right" 
+    ...
+
+
+-- Multiple properties can be animated at the same time by separating them with commas ',' .
+
+    $("div").animate(
+    {
+        width: '250px',
+        height: '250px'
+    }, 1000);
+
+--- example: <"example-6.4.2.html"> - Multiple properties
+
+-- define relative values (value relative to the element's current value). 
+   using "+=" / "-=" in front of the value:   
+
+    $("div").animate(
+    {
+        width: '+=250px',
+        height: '+=250px'
+    }, 1000);
+
+--- example: <"example-6.4.3.html"> - Multiple properties with relative values
+
+
+-- stop() method - "stop" an animation before it is finished.
+.
+.
+level 6.5 - Animation Queue 
+
+-- jQuery comes with queue functionality for animations.
+   writing multiple animate() will be calls one after another, ("internal" queue).
+   runs the animate calls one-by-one.
+
+    var div = $("div");
+    div.animate({opacity: 1});
+    div.animate({height: '+=100px', width: '+=100px', top: '+=100px'}, 500);
+    div.animate({height: '-=100px', width: '-=100px', left: '+=100px'}, 500);
+    div.animate({height: '+=100px', width: '+=100px', top: '-=100px'}, 500);
+    div.animate({height: '-=100px', width: '-=100px', left: '-=100px'}, 500);
+    div.animate({opacity: 0.5});
+
+-- Each animate() method call will run one after another.
+   Remember, to manipulate the position of elements, you need to set the CSS position property of the element to relative, fixed, or absolute.
+
+-!- The animate() method, just like the hide/show/fade/slide methods, can take an optional callback function as its parameter, 
+    which is executed after the current effect is finished.
+
+
+
