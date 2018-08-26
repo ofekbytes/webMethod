@@ -165,11 +165,38 @@ level 6.5 - Animation Queue
     div.animate({height: '-=100px', width: '-=100px', left: '-=100px'}, 500);
     div.animate({opacity: 0.5});
 
+
+--- example: <"example-6.5.1.html"> - animations queue
+
+
 -- Each animate() method call will run one after another.
    Remember, to manipulate the position of elements, you need to set the CSS position property of the element to relative, fixed, or absolute.
 
 -!- The animate() method, just like the hide/show/fade/slide methods, can take an optional callback function as its parameter, 
     which is executed after the current effect is finished.
+.
+.
+level 6.5 - Drop-Down Menu
 
+-- Let's create a simple drop-down menu that will open upon clicking on the menu item.
 
+    HTML:
+    <div class="menu">
+    <div id="item">Drop-Down</div>
+    <div id="submenu">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    </div>
+
+    JS:
+    $("#item").click(function() 
+    {
+        $("#submenu").slideToggle(500);
+    }); 
+
+--- example: <"example-6.6.1.html"> - Drop-Down Menu
+
+-- "click" event of the id="item" element and opens/closes the submenu in 500 milliseconds.
 
