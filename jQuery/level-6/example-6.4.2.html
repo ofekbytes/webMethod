@@ -1,9 +1,9 @@
-<!-- example-6.4.1.html -->
+<!-- example-6.4.2.html -->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title> animate() method </title>
+    <title> animate() method - Multiple properties </title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
 
@@ -34,10 +34,13 @@
       {
         $("div").click(function() 
         {
-           $("div").animate({width: '250px'}, 1000);
+          $("div").animate(
+          {
+              width: '250px',
+              height: '250px'
+          }, 1000);
 
-           $("#outputCallback").text("click animation");
-           console.log("click animation");
+          //console.log( '.div.width' + " " + '#div.height' );
         });
       });
    
