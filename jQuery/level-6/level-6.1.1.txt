@@ -118,7 +118,9 @@ level 6.4 - animate()
     all property names must be camel-cased when used with the animate() method 
     (camelCase is the practice of writing compound words or phrases such that each word 
     or abbreviation begins with a capital letter with the first word in lowercase).
-    
+
 --- example: 
     write paddingLeft instead of padding-left, 
     marginRight instead of margin-right....
+
+    
