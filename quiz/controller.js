@@ -25,7 +25,7 @@ $.getJSON('activity.json', function(data)
 
 	numberOfQuestions=questionBank.length; 
 
-	console.log("numberOfQuestions ==>  " + numberOfQuestions + "  questionBank.length ==> " + questionBank.length );
+	//console.log("numberOfQuestions ==>  " + numberOfQuestions + "  questionBank.length ==> " + questionBank.length );
 	displayQuestion();
 })//gtjson
 
@@ -44,7 +44,10 @@ if(rnd==1){q1=questionBank[questionNumber][1];q2=questionBank[questionNumber][2]
 if(rnd==2){q2=questionBank[questionNumber][1];q3=questionBank[questionNumber][2];q1=questionBank[questionNumber][3];}
 if(rnd==3){q3=questionBank[questionNumber][1];q1=questionBank[questionNumber][2];q2=questionBank[questionNumber][3];}
 
-$(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div>');
+$(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+
+				'</div><div id="1" class="option">'+q1+
+				'</div><div id="2" class="option">'+q2+
+				'</div><div id="3" class="option">'+q3+'</div>');
 
  $('.option').click(function()
  {
@@ -58,7 +61,7 @@ $(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</
   			$(stage).append('<div class="feedback1">נכון</div>');
   
    			rightAnswer++;
-   			console.info("wrong Asnwer = " + wrongAsnwer + " right answer = " + rightAnswer);      
+   			// console.info("wrong Asnwer = " + wrongAsnwer + " right answer = " + rightAnswer);      
       
    			//score++;
    			//console.info("תשובה נכונה" + score);
@@ -69,14 +72,14 @@ $(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</
 		{
 			$(stage).append('<div class="feedback2">לא נכון</div>');
 			wrongAsnwer++;
-			console.info("wrong Asnwer = " + wrongAsnwer + " right answer = " + rightAnswer);
+			// console.info("wrong Asnwer = " + wrongAsnwer + " right answer = " + rightAnswer);
 		}
 
-		console.log("questionBank[questionNumber][0]" + questionBank[questionNumber][0]);
-		console.log("questionBank[questionNumber][1]" + questionBank[questionNumber][1]);
-		console.log("questionBank[questionNumber][2]" + questionBank[questionNumber][2]);
-		console.log("questionBank[questionNumber][3]" + questionBank[questionNumber][3]);
-		console.log("this.id ==>" + this.id + "  ")
+		// console.log("questionBank[questionNumber][0]" + questionBank[questionNumber][0]);
+		// console.log("questionBank[questionNumber][1]" + questionBank[questionNumber][1]);
+		// console.log("questionBank[questionNumber][2]" + questionBank[questionNumber][2]);
+		// console.log("questionBank[questionNumber][3]" + questionBank[questionNumber][3]);
+		// console.log("this.id ==>" + this.id + "  rnd ==> " + rnd);
 
 		//change Question
 		setTimeout(function(){changeQuestion()},1000);			
